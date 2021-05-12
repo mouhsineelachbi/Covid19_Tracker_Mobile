@@ -1,6 +1,6 @@
-# covid19tracker
+# covid19 RealTime Tracker
 
-Tracking Covid19
+Tracking Covid19 in RealTime
 
 ## Getting Started
 

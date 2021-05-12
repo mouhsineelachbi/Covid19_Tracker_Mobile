@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:covid19tracker/themes/constants.dart';
+import 'package:line_icons/line_icons.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -59,6 +60,52 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+        ),
+        SizedBox(height: 30,),
+        Row(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Transmission Update", style: AppSubTitle),
+                SizedBox(height: 4,),
+                Text("Latest update : 12 May 20201", style: contentWhite,),
+              ],
+            ),
+            GestureDetector(
+              onTap: (){ // Todo : Refresh from the API
+                          },
+                child: Icon(Icons.refresh,
+                  color: textWhite,
+                ),
+            ),
+          ],
+        ),
+        SizedBox(height: 30,),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: textWhite.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: Container(
+                    width: 1,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      color: primary.withOpacity(0.3),
+                      border: Border.all(color: primary, width:2),
+                      borderRadius: BorderRadius.circular(40/2),
+                    ),
+                    child: Icon(Icons.flash_auto, color: primary ,),
+                  ),
+                )
+              ),
+            ),
+          ],
         ),
       ],
     ));
