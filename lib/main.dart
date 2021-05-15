@@ -1,4 +1,5 @@
 import 'package:covid19tracker/pages/home.dart';
+import 'package:covid19tracker/themes/constants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: "Covid19 RealTime Tracker",
     theme: ThemeData(
-      scaffoldBackgroundColor: Colors.blueGrey,
+      scaffoldBackgroundColor: bgColor,
       fontFamily: 'lato',
     ),
     home: HomePage(),
