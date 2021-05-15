@@ -108,18 +108,52 @@ class _DetailState extends State<Detail> {
                                 "Fever, Cough, Sneezing,\nSor Throat, Difficult in Breasthing",
                                 style: TextStyle(
                                   color: textWhite,
-                                  fontSize: 16,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   height: 1.6
                                 ),
                             ),
-                            SizedBox(height: 40,),
-                            Container(
-                              width: (screenSize.width / 2) - 120,
-                              child: FlatButton(
-                                onPressed: (){},
-                                child: Text("Yes"),
-                              ),
+                            SizedBox(height: 10,),
+                            Row(
+                              children: [
+                                Container(
+                                  width: (screenSize.width - 120) /2,
+                                  // ignore: deprecated_member_use
+                                  child: FlatButton(
+                                    color: textWhite,
+                                    onPressed: (){
+                                      //Todo press Yes function
+                                    },
+                                    child: Text(
+                                      "Yes",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 40,),
+                                Container(
+                                  width: (screenSize.width - 120) /2,
+                                  // ignore: deprecated_member_use
+                                  child: FlatButton(
+                                    color: textWhite,
+                                    onPressed: (){
+                                      //Todo pressed No function
+                                    },
+                                    child: Text(
+                                      "No",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             )
                           ],
                         ),
