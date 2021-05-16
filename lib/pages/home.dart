@@ -1,10 +1,12 @@
 import 'package:covid19tracker/pages/detail.dart';
+import 'package:covid19tracker/services/covid19info.dart';
 import 'package:covid19tracker/widgets/cardstatus.dart';
 import 'package:covid19tracker/widgets/charts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:covid19tracker/themes/constants.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:covid19tracker/services/covid19info.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,6 +14,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  Covid19Info data =  new Covid19Info();
+
+
   @override
   Widget getBody() {
     return SafeArea(
