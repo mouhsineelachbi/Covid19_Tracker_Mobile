@@ -1,4 +1,5 @@
 import 'package:covid19tracker/pages/home.dart';
+import 'package:covid19tracker/pages/loading.dart';
 import 'package:covid19tracker/themes/constants.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,5 @@
 import 'package:covid19tracker/pages/detail.dart';
+import 'package:covid19tracker/pages/loading.dart';
 import 'package:covid19tracker/services/covid19info.dart';
 import 'package:covid19tracker/widgets/cardstatus.dart';
 import 'package:covid19tracker/widgets/charts.dart';
@@ -16,11 +17,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   Covid19Info data =  new Covid19Info();
+  final String NewConfirmed;
+  final String TotalConfirmed;
+  final String NewRecovered;
+  final String TotalRecovered;
+  final String NewDeaths;
+  final String TotalDeaths;
+  bool loading = true;
 
+  _HomePageState({this.NewConfirmed, this.TotalConfirmed, this.NewRecovered, this.TotalRecovered, this.NewDeaths, this.TotalDeaths});
+
+  @override
+  void initState() {
+    super.initState();
+    //Map infoData = data.getInfo();
+
+
+  }
 
   @override
   Widget getBody() {
-    return SafeArea(
+    return loading ? Loading() : SafeArea(
         child: ListView(
       padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
       children: [

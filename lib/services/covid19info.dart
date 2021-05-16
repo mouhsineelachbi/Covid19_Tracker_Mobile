@@ -25,6 +25,7 @@ class Covid19Info {
       NewDeaths = data["NewDeaths"];
       TotalDeaths = data["TotalDeaths"];
 
+      return data;
     }catch(error){
       print(error);
     }
